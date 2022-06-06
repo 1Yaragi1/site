@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/object.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="headers">
+
+			<div class="header">
+			    <div class="container">
+				    <div class="header__body">
+					    <a href="index.html" class="header__logo">
+						    <img src="img/icon/Е.png" alt="">
+					    </a>
+					    <div class="header__name">
+						    <a href="index.html">СЛВ</a>
+					    </div>
+					
+					    <div class="header__burger">
+						    <span></span>
+					    </div>
+					    <nav class="header__menu">
+						    <ul class="header__list">
+						 	    <li>
+								   <a href="news.html" class="header__link">О компании</a>
+							    </li>
+							    <li>
+								   <a href="live.html" class="header__link">Новости</a>
+							    </li>
+							    <li>
+								   <a href="object.html" class="header__link header__link__object ">Наши объекты</a>
+							    </li>
+							    <li>
+								   <a href="#contacs" class="header__link">Контакты</a>
+							    </li>
+							    <li>
+								   <a href="Enter.html" class="header__link">Вход <img src="img/icon/6380858.png" alt=""></a>
+							    </li>
+						    </ul>
+					    </nav>
+				    </div>
+			    </div>
+		    </div>
+
+		    <div class="object">
+		    	<div class="container">
+		    		<div class="object__body">
+		    			<div class="object__title">Наши объекты</div>
+		    			<div class="object__images">
+		    				<div class="object__column">
+		    					<div class="object__image"><img src="img/dom4.jpg" alt=""><p class="object__text">Усадьба Брянчаниновых</p></div>
+		    				    <div class="object__image2"><img src="img/Слой 14.jpg" alt=""><p class="object__text">Храм на Профсоюзной улице</p></div>
+		    				</div>
+		    				<div class="object__column2">
+		    					<div class="object__image3"><img src="img/dom3.jpg" alt=""><p class="object__text">ФГУП «Московский эндокринный завод»</p></div>
+		    				    <div class="object__image4"><img src="img/dom5.jpg" alt=""><p class="object__text">Дом на Полянке</p></div>
+		    				</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+
+
+		   
+	    </div>
+
+		<footer class="footer" id="contacs">
+			<div class="container">
+				<div class="footer__row">
+					<div class="footer__title">СВЯЗАТЬСЯ С НАМИ</div>
+					<div class="footer__subtitle">Реконструкция зданий и сооружений от компании «СЛВ»</div>
+					<div class="footer__links">
+						<a href="#" class="footer__link">+7 (928) 050-22-72</a>
+						<a href="#" class="footer__link">
+						IconKhamel03@mail.ru</a>
+					</div>
+
+					<form action="#" method="post" enctype="multipart/form-data">
+						<div class="footer__label">НАПИШИТЕ НАМ</div>
+						<div class="footer__mainEnter">
+							<div class="footer__username">
+							    <input type="text" name="username" class="footer__enter" placeholder="Имя">
+						    </div>
+						    <div class="footer__useremail">
+							    <input type="text" name="username" class="footer__enter" placeholder="Email">
+						    </div>
+						    <div class="footer__usertext">
+							   <input type="text" name="username" class="footer__enter" placeholder="Тема">
+						    </div>
+						    <div class="footer__usertext2">
+							  <textarea cols="50" rows="5" name="usertext" class="footer__enter" placeholder="Сообщение"></textarea>
+						   </div>
+						   <button type="submit" class="footer__userbtn">Отправить</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+	<script src="js/document.js"></script>
+	<script type="text/javascript">
+		var counter = 1;
+		setInterval(function(){
+			document.getElementById('radio' + counter).checked = true;
+			counter++;
+			if(counter > 3){
+				counter = 1;
+			}
+		}, 5000)
+	</script>
+</body>
+</html>

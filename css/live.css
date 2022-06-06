@@ -1,0 +1,1487 @@
+@charset "UTF-8";
+body {
+  background-color: rgba(231, 165, 128, 0.7);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+* {
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.headers {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 1000px;
+  flex: 1 1 1000px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e7a580;
+  z-index: 3;
+  border-bottom: 2px solid #fff;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header__body {
+  position: relative;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 3;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__logo img {
+  max-width: 130px;
+  display: block;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__list li {
+  list-style: none;
+  margin: 0 0 0 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.header__list li:first-child {
+  margin: 0;
+}
+
+.header__link {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__link__live {
+  color: #fff;
+}
+
+.header__link:hover {
+  color: #fff;
+}
+
+.header__list li img:last-child {
+  max-width: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: -30px 0 0 60px;
+  display: block;
+}
+
+.header__list li img:last-child:hover {
+  background: #fff;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .header__list li {
+    list-style: none;
+    margin: 0 0 0 20px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .header__link {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 17px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+
+  .header__list li img:last-child {
+    max-width: 22px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin: -24px 0 0 60px;
+    display: block;
+  }
+
+  .header__logo img {
+    max-width: 120px;
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .header__list li {
+    list-style: none;
+    margin: 0 0 0 20px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .header__link {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .header__list li img:last-child {
+    max-width: 23px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin: -24px 0 0 50px;
+    display: block;
+  }
+
+  .header__logo img {
+    max-width: 110px;
+    display: block;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .header__body {
+    height: 70px;
+  }
+
+  .header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40px;
+            flex: 0 0 40px;
+  }
+
+  .header__logo img {
+    max-width: 100px;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger:before,
+.header__burger:after {
+    content: "";
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger:before {
+    top: 0;
+  }
+
+  .header__burger:after {
+    bottom: 0;
+  }
+
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .header__burger.active:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+
+  .header__burger.active:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 23%;
+    background-color: rgba(231, 165, 128, 0.7);
+    padding: 50px 0 0 0px;
+    text-align: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+
+  .header__menu.active {
+    top: 0;
+  }
+
+  .header__list li {
+    list-style: none;
+    margin: 0 0 0 20px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .header__link {
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .header__list li img:last-child {
+    max-width: 23px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin: -24px 0 0 50px;
+    display: block;
+  }
+
+  .header__logo img {
+    max-width: 110px;
+    display: block;
+  }
+
+  .header__list li img:last-child {
+    display: none;
+  }
+
+  .header__list {
+    display: block;
+  }
+
+  .header__list li {
+    margin: 0 0 15px 0;
+  }
+
+  .header__list li:first-child {
+    margin: 40px 0 15px 0;
+  }
+}
+.live__body {
+  margin: 120px 0 0 0;
+}
+
+.live__title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.live__img {
+  position: relative;
+  max-width: 900px;
+  border: 5px solid #fff;
+  margin: 0 0 0 100px;
+  padding: 0 0 500px 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: url("../img/fontan.jpg") 0px 0px/900px 500px no-repeat;
+}
+
+.live__img:before {
+  content: "ДО";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  font-size: 30px;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.live__img:hover:before {
+  content: "";
+}
+
+.live__img:after {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.live__img:hover:after {
+  content: "ПОСЛЕ";
+  position: absolute;
+  top: 50%;
+  right: -15%;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.live__img:hover {
+  border: 5px solid #fff;
+  /*padding: 10px;*/
+  background: url("../img/fontan1.jpg") 0px 0px/900px 500px no-repeat;
+}
+
+.live__text p {
+  font-size: 25px;
+  margin: 20px 0 20px 0;
+}
+
+.live__img2 {
+  position: relative;
+  max-width: 900px;
+  border: 5px solid #fff;
+  margin: 0 0 0 100px;
+  padding: 0 0 500px 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: url("../img/Слой 15.jpg") 0px 0px/900px 500px no-repeat;
+}
+
+.live__img2:before {
+  content: "ДО";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  font-size: 30px;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.live__img2:hover:before {
+  content: "";
+}
+
+.live__img2:after {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.live__img2:hover:after {
+  content: "ПОСЛЕ";
+  position: absolute;
+  top: 50%;
+  right: -15%;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.live__img2:hover {
+  border: 5px solid #fff;
+  /*padding: 10px;*/
+  background: url("../img/Слой 14.jpg") 0px 0px/900px 500px no-repeat;
+}
+
+.live__img3 {
+  position: relative;
+  max-width: 800px;
+  border: 5px solid #fff;
+  margin: 0 0 0 150px;
+  padding: 0 0 500px 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: url("../img/dom7.jpg") 0px 0px/900px 500px no-repeat;
+}
+
+.live__img3:before {
+  content: "ДО";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  font-size: 30px;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.live__img3:hover:before {
+  content: "";
+}
+
+.live__img3:after {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.live__img3:hover:after {
+  content: "ПОСЛЕ";
+  position: absolute;
+  top: 50%;
+  right: -15%;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.live__img3:hover {
+  border: 5px solid #fff;
+  /*padding: 10px;*/
+  background: url("../img/dom4.jpg") 0px 0px/900px 500px no-repeat;
+}
+
+.live__img4 {
+  position: relative;
+  max-width: 800px;
+  border: 5px solid #fff;
+  margin: 0 0 30px 150px;
+  padding: 0 0 500px 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: url("../img/dom6.jpg") 0px 0px/900px 500px no-repeat;
+}
+
+.live__img4:before {
+  content: "ДО";
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  font-size: 30px;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.live__img4:hover:before {
+  content: "";
+}
+
+.live__img4:after {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.live__img4:hover:after {
+  content: "ПОСЛЕ";
+  position: absolute;
+  top: 50%;
+  right: -15%;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.live__img4:hover {
+  border: 5px solid #fff;
+  /*padding: 10px;*/
+  background: url("../img/dom5.jpg") 0px 0px/900px 500px no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .live__body {
+    margin: 120px 0 0 0;
+  }
+
+  .live__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  .live__img {
+    position: relative;
+    max-width: 700px;
+    border: 5px solid #fff;
+    margin: 0 0 0 50px;
+    padding: 0 0 450px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/fontan.jpg") 0px 0px/700px 450px no-repeat;
+  }
+
+  .live__img:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -8%;
+    font-size: 27px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img:hover:before {
+    content: "";
+  }
+
+  .live__img:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img:hover:after {
+    content: "ПОСЛЕ";
+    position: absolute;
+    top: 50%;
+    right: -16%;
+    font-size: 27px;
+    font-weight: 700;
+  }
+
+  .live__img:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/fontan1.jpg") 0px 0px/700px 450px no-repeat;
+  }
+
+  .live__text {
+    margin: 15px 0 15px 20px;
+    max-width: 800px;
+  }
+
+  .live__text p {
+    font-size: 25px;
+    margin: 0px 0 5px 0;
+    line-height: 30px;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+  }
+
+  .live__img2 {
+    position: relative;
+    max-width: 700px;
+    border: 5px solid #fff;
+    margin: 0 0 0 50px;
+    padding: 0 0 450px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/Слой 15.jpg") 0px 0px/700px 450px no-repeat;
+  }
+
+  .live__img2:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -8%;
+    font-size: 27px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img2:hover:before {
+    content: "";
+  }
+
+  .live__img2:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img2:hover:after {
+    content: "ПОСЛЕ";
+    position: absolute;
+    top: 50%;
+    right: -16%;
+    font-size: 27px;
+    font-weight: 700;
+  }
+
+  .live__img2:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/Слой 14.jpg") 0px 0px/700px 450px no-repeat;
+  }
+
+  .live__img3 {
+    position: relative;
+    max-width: 700px;
+    border: 5px solid #fff;
+    margin: 0 0 0 50px;
+    padding: 0 0 450px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/dom7.jpg") 0px 0px/700px 450px no-repeat;
+  }
+
+  .live__img3:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -8%;
+    font-size: 27px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img3:hover:before {
+    content: "";
+  }
+
+  .live__img3:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img3:hover:after {
+    content: "ПОСЛЕ";
+    position: absolute;
+    top: 50%;
+    right: -16%;
+    font-size: 27px;
+    font-weight: 700;
+  }
+
+  .live__img3:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/dom4.jpg") 0px 0px/700px 450px no-repeat;
+  }
+
+  .live__img4 {
+    position: relative;
+    max-width: 700px;
+    border: 5px solid #fff;
+    margin: 0 0 30px 50px;
+    padding: 0 0 450px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/dom6.jpg") 0px 0px/700px 450px no-repeat;
+  }
+
+  .live__img4:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -8%;
+    font-size: 27px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img4:hover:before {
+    content: "";
+  }
+
+  .live__img4:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img4:hover:after {
+    content: "ПОСЛЕ";
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    font-size: 27px;
+    font-weight: 700;
+  }
+
+  .live__img4:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/dom5.jpg") 0px 0px/700px 450px no-repeat;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .live__body {
+    margin: 120px 0 0 0;
+  }
+
+  .live__title {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  .live__img {
+    position: relative;
+    max-width: 600px;
+    border: 5px solid #fff;
+    margin: 0 0 0 45px;
+    padding: 0 0 400px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/fontan.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -7%;
+    font-size: 23px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img:hover:before {
+    content: "";
+  }
+
+  .live__img:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img:hover:after {
+    content: "ПОСЛЕ";
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  .live__img:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/fontan1.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__text {
+    margin: 15px 0 15px 30px;
+    max-width: 700px;
+  }
+
+  .live__text p {
+    font-size: 25px;
+    margin: 0px 0 10px 0;
+    line-height: 30px;
+    word-spacing: 7px;
+    letter-spacing: 0.5px;
+  }
+
+  .live__img2 {
+    position: relative;
+    max-width: 600px;
+    border: 5px solid #fff;
+    margin: 0 0 0 45px;
+    padding: 0 0 400px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/Слой 15.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img2:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -7%;
+    font-size: 23px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img2:hover:before {
+    content: "";
+  }
+
+  .live__img2:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img2:hover:after {
+    content: "ПОСЛЕ";
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  .live__img2:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/Слой 14.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img3 {
+    position: relative;
+    max-width: 600px;
+    border: 5px solid #fff;
+    margin: 0 0 0 45px;
+    padding: 0 0 400px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/dom7.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img3:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -7%;
+    font-size: 23px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img3:hover:before {
+    content: "";
+  }
+
+  .live__img3:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img3:hover:after {
+    content: "ПОСЛЕ";
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  .live__img3:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/dom4.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img4 {
+    position: relative;
+    max-width: 600px;
+    border: 5px solid #fff;
+    margin: 0 0 30px 45px;
+    padding: 0 0 400px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/dom6.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img4:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -7%;
+    font-size: 23px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img4:hover:before {
+    content: "";
+  }
+
+  .live__img4:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img4:hover:after {
+    content: "ПОСЛЕ";
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    font-size: 23px;
+    font-weight: 700;
+  }
+
+  .live__img4:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/dom5.jpg") 0px 0px/600px 400px no-repeat;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .live__body {
+    margin: 120px 0 0 0;
+  }
+
+  .live__title {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  .live__img {
+    position: relative;
+    max-width: 600px;
+    border: 5px solid #fff;
+    margin: 0 0 0 45px;
+    padding: 0 0 400px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/fontan.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -6%;
+    font-size: 20px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img:hover:before {
+    content: "";
+  }
+
+  .live__img:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img:hover:after {
+    content: "ПОС";
+    position: absolute;
+    top: 50%;
+    right: -8%;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .live__img:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/fontan1.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__text {
+    margin: 15px 0 15px 30px;
+    max-width: 700px;
+  }
+
+  .live__text p {
+    font-size: 25px;
+    margin: 0px 0 10px 0;
+    line-height: 30px;
+    word-spacing: 7px;
+    letter-spacing: 0.5px;
+  }
+
+  .live__img2 {
+    position: relative;
+    max-width: 600px;
+    border: 5px solid #fff;
+    margin: 0 0 0 45px;
+    padding: 0 0 400px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/Слой 15.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img2:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -6%;
+    font-size: 20px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img2:hover:before {
+    content: "";
+  }
+
+  .live__img2:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img2:hover:after {
+    content: "ПОС";
+    position: absolute;
+    top: 50%;
+    right: -8%;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .live__img2:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/Слой 14.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img3 {
+    position: relative;
+    max-width: 600px;
+    border: 5px solid #fff;
+    margin: 0 0 0 45px;
+    padding: 0 0 400px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/dom7.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img3:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -6%;
+    font-size: 20px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img3:hover:before {
+    content: "";
+  }
+
+  .live__img3:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img3:hover:after {
+    content: "ПОС";
+    position: absolute;
+    top: 50%;
+    right: -8%;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .live__img3:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/dom4.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img4 {
+    position: relative;
+    max-width: 600px;
+    border: 5px solid #fff;
+    margin: 0 0 30px 45px;
+    padding: 0 0 400px 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: url("../img/dom6.jpg") 0px 0px/600px 400px no-repeat;
+  }
+
+  .live__img4:before {
+    content: "ДО";
+    position: absolute;
+    top: 50%;
+    left: -6%;
+    font-size: 20px;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img4:hover:before {
+    content: "";
+  }
+
+  .live__img4:after {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .live__img4:hover:after {
+    content: "ПОС";
+    position: absolute;
+    top: 50%;
+    right: -8%;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .live__img4:hover {
+    border: 5px solid #fff;
+    /*padding: 10px;*/
+    background: url("../img/dom5.jpg") 0px 0px/600px 400px no-repeat;
+  }
+}
+.footer {
+  background-color: #e7a580;
+  padding: 50px 0 50px 0;
+}
+
+.footer__title {
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.footer__subtitle {
+  font-size: 30px;
+  margin: 10px 0 40px 0;
+}
+
+.footer__links {
+  margin: 0 0 50px 0;
+}
+
+.footer__links a {
+  margin: 0 0 20px 0;
+}
+
+.footer__links a:last-child {
+  margin: 0;
+}
+
+.footer__link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 25px;
+}
+
+.footer__link:first-child {
+  padding: 0 0 0 35px;
+  background: url("../img/icon/Слой 14.png") 0px 3px/24px no-repeat;
+}
+
+.footer__link:last-child {
+  padding: 0 0 0 35px;
+  background: url("../img/icon/Слой 15.png") 0px 4px/30px no-repeat;
+}
+
+.footer__link:hover {
+  color: #fff;
+}
+
+.footer__label {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+.footer__enter {
+  margin: 0 0 30px 0;
+  background-color: #e7a580;
+  border: 2px solid #fff;
+  font-size: 20px;
+}
+
+.footer__enter::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer__username input:nth-child(1) {
+  padding: 20px 200px 20px 20px;
+}
+
+.footer__useremail input:nth-child(1) {
+  padding: 20px 50px 20px 20px;
+}
+
+.footer__usertext input:nth-child(1) {
+  padding: 20px 150px 20px 20px;
+}
+
+.footer__usertext2 textarea:nth-child(1) {
+  padding: 10px 0 0 10px;
+}
+
+.footer__userbtn {
+  background-color: #e7a580;
+  border: 2px solid #fff;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 15px 10px 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer__userbtn:hover {
+  color: #000;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .footer {
+    background-color: #e7a580;
+    padding: 40px 0 40px 0;
+  }
+
+  .footer__title {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  .footer__subtitle {
+    font-size: 25px;
+    margin: 15px 0 30px 0;
+  }
+
+  .footer__links {
+    margin: 0 0 30px 0;
+    max-width: 300px;
+  }
+
+  .footer__links a {
+    margin: 0 0 20px 0;
+  }
+
+  .footer__links a:last-child {
+    margin: 0;
+  }
+
+  .footer__link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 25px;
+  }
+
+  .footer__link:first-child {
+    padding: 0 0 0 35px;
+    background: url("../img/icon/Слой 14.png") 0px 3px/24px no-repeat;
+  }
+
+  .footer__link:last-child {
+    padding: 0 0 0 35px;
+    background: url("../img/icon/Слой 15.png") 0px 4px/30px no-repeat;
+  }
+
+  .footer__link:hover {
+    color: #fff;
+  }
+
+  .footer__label {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+  }
+
+  .footer__enter {
+    margin: 0 0 30px 0;
+    background-color: #e7a580;
+    border: 2px solid #fff;
+    font-size: 20px;
+  }
+
+  .footer__enter::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .footer__username input:nth-child(1) {
+    padding: 20px 200px 20px 20px;
+  }
+
+  .footer__useremail input:nth-child(1) {
+    padding: 20px 50px 20px 20px;
+  }
+
+  .footer__usertext input:nth-child(1) {
+    padding: 20px 150px 20px 20px;
+  }
+
+  .footer__usertext2 textarea:nth-child(1) {
+    padding: 10px 0 0 10px;
+  }
+
+  .footer__userbtn {
+    background-color: #e7a580;
+    border: 2px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .footer__userbtn:hover {
+    color: #000;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .footer {
+    background-color: #e7a580;
+    padding: 50px 0 60px 0;
+  }
+
+  .footer__title {
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+  .footer__subtitle {
+    font-size: 20px;
+    margin: 15px 0 20px 0;
+  }
+
+  .footer__links {
+    margin: 0 0 20px 0;
+    max-width: 300px;
+  }
+
+  .footer__links a {
+    margin: 0 0 15px 0;
+  }
+
+  .footer__links a:last-child {
+    margin: 0;
+  }
+
+  .footer__link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 20px;
+  }
+
+  .footer__link:first-child {
+    padding: 0 0 0 25px;
+    background: url("../img/icon/Слой 14.png") 0px 2px/20px no-repeat;
+  }
+
+  .footer__link:last-child {
+    padding: 0 0 0 30px;
+    background: url("../img/icon/Слой 15.png") 0px 2px/25px no-repeat;
+  }
+
+  .footer__link:hover {
+    color: #fff;
+  }
+
+  .footer__label {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+  }
+
+  .footer__enter {
+    margin: 0 0 30px 0;
+    background-color: #e7a580;
+    border: 2px solid #fff;
+    font-size: 20px;
+  }
+
+  .footer__enter::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .footer__username input:nth-child(1) {
+    padding: 20px 200px 20px 20px;
+  }
+
+  .footer__useremail input:nth-child(1) {
+    padding: 20px 50px 20px 20px;
+  }
+
+  .footer__usertext input:nth-child(1) {
+    padding: 20px 150px 20px 20px;
+  }
+
+  .footer__usertext2 textarea:nth-child(1) {
+    padding: 10px 0 0 10px;
+  }
+
+  .footer__userbtn {
+    background-color: #e7a580;
+    border: 2px solid #fff;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .footer__userbtn:hover {
+    color: #000;
+  }
+}

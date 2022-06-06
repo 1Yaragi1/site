@@ -1,0 +1,326 @@
+* {
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.enter__row {
+  margin: 20% 0 0 0;
+}
+
+.enter__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.enter__logo img {
+  max-width: 150px;
+  display: block;
+  cursor: pointer;
+}
+
+.enter__logo a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0px 0 30px 0;
+}
+
+.enter__datas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.enter__datas a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 15px 0 0 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.enter__datas a:last-child {
+  margin: 5px 0 0 0;
+}
+
+.enter__datas a:hover {
+  color: #000;
+}
+
+.enter__datas button {
+  display: inline-block;
+  background: #e7a580;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 23px;
+  padding: 12.5px 30px 12.5px 30px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.enter__datas button:hover {
+  color: #000;
+}
+
+.enter__data input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.enter__data input::-webkit-input-focus {
+  border: none;
+}
+
+.enter__data input {
+  background: #e7a580;
+  border: 1px solid #fff;
+  padding: 20px 150px 20px 5px;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.enter__data input:focus {
+  -webkit-box-shadow: 0 0 10px 1px #000;
+          box-shadow: 0 0 10px 1px #000;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .enter__row {
+    margin: 30% 0 0 0;
+  }
+
+  .enter__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .enter__logo img {
+    max-width: 130px;
+    display: block;
+    cursor: pointer;
+  }
+
+  .enter__logo a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0px 0 20px 0;
+  }
+
+  .enter__datas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .enter__datas a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 15px 0 0 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .enter__datas a:hover {
+    color: #000;
+  }
+
+  .enter__datas button {
+    display: inline-block;
+    background: #e7a580;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    padding: 12.5px 20px 12.5px 20px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .enter__datas button:hover {
+    color: #000;
+  }
+
+  .enter__data input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .enter__data input::-webkit-input-focus {
+    border: none;
+  }
+
+  .enter__data input {
+    background: #e7a580;
+    border: 1px solid #fff;
+    padding: 15px 120px 15px 5px;
+    margin: 0 0 20px 0;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .enter__data input:focus {
+    -webkit-box-shadow: 0 0 10px 1px #000;
+            box-shadow: 0 0 10px 1px #000;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .enter__row {
+    margin: 50% 0 0 0;
+  }
+
+  .enter__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .enter__logo img {
+    max-width: 130px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .enter__logo a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0px 0 20px 0;
+  }
+
+  .enter__datas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .enter__datas a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 15px 0 0 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .enter__datas a:hover {
+    color: #000;
+  }
+
+  .enter__datas button {
+    display: inline-block;
+    background: #e7a580;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    padding: 12.5px 20px 12.5px 20px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .enter__datas button:hover {
+    color: #000;
+  }
+
+  .enter__data input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .enter__data input::-webkit-input-focus {
+    border: none;
+  }
+
+  .enter__data input {
+    background: #e7a580;
+    border: 1px solid #fff;
+    padding: 15px 120px 15px 5px;
+    margin: 0 0 20px 0;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .enter__data input:focus {
+    -webkit-box-shadow: 0 0 10px 1px #000;
+            box-shadow: 0 0 10px 1px #000;
+  }
+}
